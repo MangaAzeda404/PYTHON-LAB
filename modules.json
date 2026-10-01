@@ -1,0 +1,198 @@
+[
+  {
+    "id": "esmaltes",
+    "title": "Coleção de esmaltes",
+    "category": "Variáveis e soma",
+    "icon": "01",
+    "desc": "Some as três cores e descubra o tamanho da coleção de Luiza.",
+    "fields": [
+      [
+        "azuis",
+        "Esmaltes azuis",
+        7,
+        "int"
+      ],
+      [
+        "vermelhos",
+        "Esmaltes vermelhos",
+        18,
+        "int"
+      ],
+      [
+        "brancos",
+        "Esmaltes brancos",
+        12,
+        "int"
+      ]
+    ],
+    "code": "esmaltes_azuis = 7\nesmaltes_vermelhos = 18\nesmaltes_brancos = 12\n\nesmaltes_totais = esmaltes_azuis + esmaltes_vermelhos + esmaltes_brancos\nprint(f\"Luiza tem {esmaltes_totais} esmaltes.\")",
+    "explain": "O operador + soma os valores. A atribuição (=) guarda o resultado em esmaltes_totais. print() exibe a mensagem; não calcula a soma por conta própria.",
+    "steps": [
+      "Armazenar as quantidades nas variáveis.",
+      "Somar 7 + 18 + 12.",
+      "Exibir o total: 37 esmaltes."
+    ]
+  },
+  {
+    "id": "pontos",
+    "title": "Pontuação de Pedro",
+    "category": "Multiplicação e soma",
+    "icon": "02",
+    "desc": "Calcule os pontos da corrida e da natação no campeonato.",
+    "fields": [
+      [
+        "km",
+        "Quilômetros corridos",
+        5,
+        "float"
+      ],
+      [
+        "voltas",
+        "Voltas na piscina",
+        8,
+        "int"
+      ]
+    ],
+    "code": "corrida = 3\nnatacao = 5\nquilometros = float(input(\"Quilômetros corridos: \"))\nvoltas = int(input(\"Voltas na piscina: \"))\n\ntotal = corrida * quilometros + natacao * voltas\nprint(f\"A pontuação total de Pedro é {total:g}\")",
+    "explain": "A corrida vale 3 pontos por quilômetro e a natação vale 5 pontos por volta. A multiplicação é avaliada antes da soma.",
+    "steps": [
+      "Corrida: 3 × 5 = 15 pontos.",
+      "Natação: 5 × 8 = 40 pontos.",
+      "Somar as atividades: 15 + 40 = 55."
+    ]
+  },
+  {
+    "id": "jogos",
+    "title": "Jogos entre amigos",
+    "category": "Divisão inteira e resto",
+    "icon": "03",
+    "desc": "Distribua jogos em quantidades iguais e descubra a sobra.",
+    "fields": [
+      [
+        "jogos",
+        "Total de jogos",
+        23,
+        "int"
+      ],
+      [
+        "amigos",
+        "Número de amigos",
+        5,
+        "positive"
+      ]
+    ],
+    "code": "total_jogos = int(input(\"Digite o total de jogos: \"))\nnumero_amigos = int(input(\"Digite o número de amigos: \"))\n\nif total_jogos < 0 or numero_amigos <= 0:\n    print(\"Informe jogos não negativos e pelo menos um amigo.\")\nelse:\n    jogos_por_amigo = total_jogos // numero_amigos\n    resto = total_jogos % numero_amigos\n    print(f\"Cada amigo recebe {jogos_por_amigo} jogos.\")\n    print(f\"Restam {resto} jogos.\")",
+    "explain": "Para quantidades não negativas, // indica quantos jogos inteiros cada amigo recebe e % calcula a sobra. A divisão é exata quando o resto é zero. O número de amigos deve ser maior que zero.",
+    "steps": [
+      "Divisão inteira: 23 // 5 = 4.",
+      "Resto: 23 % 5 = 3.",
+      "Cada amigo recebe 4 jogos e sobram 3."
+    ]
+  },
+  {
+    "id": "idade",
+    "title": "Idade no futuro",
+    "category": "input, int e f-string",
+    "icon": "04",
+    "desc": "Descubra a idade de uma pessoa depois de um número de anos.",
+    "fields": [
+      [
+        "idade",
+        "Idade atual",
+        16,
+        "int"
+      ],
+      [
+        "anos",
+        "Anos a adicionar",
+        5,
+        "int"
+      ]
+    ],
+    "code": "idade_atual = int(input(\"Digite sua idade atual: \"))\nanos_adicionar = int(input(\"Quantos anos você quer adicionar? \"))\n\nidade_futura = idade_atual + anos_adicionar\nprint(f\"Daqui a {anos_adicionar} anos, você terá {idade_futura} anos.\")",
+    "explain": "input() recebe texto. int() converte uma entrada válida em inteiro. A soma é armazenada em idade_futura. Na f-string, as chaves inserem os valores na mensagem.",
+    "steps": [
+      "Receber a idade atual: 16.",
+      "Adicionar 5 anos: 16 + 5 = 21.",
+      "Exibir os anos adicionados e a idade futura."
+    ]
+  },
+  {
+    "id": "triangulo",
+    "title": "Área do triângulo",
+    "category": "Conversão e divisão",
+    "icon": "05",
+    "desc": "Use base e altura para calcular a área em unidades quadradas.",
+    "fields": [
+      [
+        "base",
+        "Base",
+        5,
+        "measure"
+      ],
+      [
+        "altura",
+        "Altura",
+        3,
+        "measure"
+      ]
+    ],
+    "code": "base = float(input(\"Digite a base do triângulo: \"))\naltura = float(input(\"Digite a altura do triângulo: \"))\n\nif base <= 0 or altura <= 0:\n    print(\"A base e a altura devem ser positivas.\")\nelse:\n    area = base * altura / 2\n    print(f\"A área do triângulo é {area:g}.\")",
+    "explain": "A fórmula é base × altura ÷ 2. É preciso converter as entradas de texto em números. float() permite medidas decimais; int() também funciona quando as medidas são inteiras. Use a mesma unidade na base e na altura.",
+    "steps": [
+      "Converter base e altura em números.",
+      "Multiplicar: 5 × 3 = 15.",
+      "Dividir por 2: área = 7,5 unidades²."
+    ]
+  },
+  {
+    "id": "carrinho",
+    "title": "Limite do carrinho",
+    "category": "if, else e comparação",
+    "icon": "06",
+    "desc": "Verifique se dois itens respeitam o limite de 20 kg.",
+    "fields": [
+      [
+        "peso1",
+        "Peso do item 1 (kg)",
+        8,
+        "float"
+      ],
+      [
+        "peso2",
+        "Peso do item 2 (kg)",
+        12,
+        "float"
+      ]
+    ],
+    "code": "peso_item1 = float(input(\"Digite o peso do item 1: \"))\npeso_item2 = float(input(\"Digite o peso do item 2: \"))\n\nif peso_item1 + peso_item2 <= 20:\n    print(\"Os itens cabem no carrinho.\")\nelse:\n    print(\"Os itens excedem o peso permitido.\")",
+    "explain": "O operador <= inclui o limite: exatamente 20 kg também é permitido. if executa o primeiro bloco quando a condição é verdadeira; else executa o outro quando é falsa. Aqui float() também aceita pesos decimais.",
+    "steps": [
+      "Somar os pesos: 8 + 12 = 20 kg.",
+      "Comparar: 20 <= 20 é verdadeiro.",
+      "Exibir: Os itens cabem no carrinho."
+    ]
+  },
+  {
+    "id": "cinema",
+    "title": "Capacidade do cinema",
+    "category": "Condição e sequência",
+    "icon": "07",
+    "desc": "Confira se um grupo pode entrar em um cinema de 100 lugares.",
+    "fields": [
+      [
+        "pessoas",
+        "Pessoas no grupo",
+        100,
+        "int"
+      ]
+    ],
+    "code": "total_pessoas = int(input(\"Quantas pessoas estão no grupo? \"))\n\nif total_pessoas <= 100:\n    print(\"Todos podem entrar.\")\nelse:\n    print(\"O grupo excede a capacidade.\")",
+    "explain": "A ordem é: receber a quantidade, verificar a condição, exibir a mensagem do if ou do else. A indentação define quais instruções pertencem a cada bloco. O exemplo considera o cinema vazio e avalia somente o tamanho do grupo.",
+    "steps": [
+      "Receber a quantidade: 100 pessoas.",
+      "Comparar: 100 <= 100 é verdadeiro.",
+      "Exibir: Todos podem entrar."
+    ]
+  }
+]
